@@ -636,12 +636,18 @@ const (
 //	seconds := 10
 //	fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
 const (
-	Nanosecond  Duration = 1
-	Microsecond          = 1000 * Nanosecond
-	Millisecond          = 1000 * Microsecond
-	Second               = 1000 * Millisecond
-	Minute               = 60 * Second
-	Hour                 = 60 * Minute
+	Nanosecond  	Duration = 1
+	FiveNanosecond  Duration = 1 * 5
+	Microsecond          	 = 1000 * Nanosecond
+	FiveMicroseconds     	 = 1000 * 5 * Nanosecond
+	Millisecond         	 = 1000 * Microsecond
+	FiveMilliseconds    	 = 1000 * 5 * Microsecond
+	Second              	 = 1000 * Millisecond
+	FiveSeconds         	 = 1000 * 5 * Millisecond
+	Minute              	 = 60 * Second
+	FiveMinutes         	 = 60 * 5 * Second
+	Hour                	 = 60 * Minute
+	FiveHours                = 60 * 5 * Minute
 )
 
 // String returns a string representing the duration in the form "72h3m0.5s".
